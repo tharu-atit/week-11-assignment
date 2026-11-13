@@ -1,0 +1,199 @@
+/* Global Box-Sizing Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   Horizontal Card Layout
+   ========================================== */
+.content-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.card-container {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  max-width: 450px;
+  width: 100%;
+  padding: 30px;
+  border: 2px solid #333333;
+  box-shadow: 0 0 20px 10px rgba(30, 215, 96, 0.2);
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#profile-name {
+  color: #1db954;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card-info {
+  color: #b3b3b3;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.art-section {
+  margin: 20px 0;
+}
+
+.art-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #282828;
+}
+
+/* Tech Stack Badge Section Styling */
+.tech-stack-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #181818;
+  border-radius: 12px;
+  border: 1px solid #282828;
+}
+
+.tech-badge {
+  background-color: #282828;
+  color: #1db954;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #333333;
+}
+
+.bio-section {
+  margin-bottom: 20px;
+}
+
+.bio-section h2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.bio-text {
+  color: #b3b3b3;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.card-footer h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 0;
+}
+
+.contact-links a {
+  color: #1db954;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid #1db954;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-links a:hover {
+  background-color: #1ed760;
+  border-color: #1ed760;
+  color: #121212;
+}
+
+/* ==========================================
+   Theme Toggle Button & Light Mode Overrides
+   ========================================== */
+.theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid #1db954;
+  background-color: #1e1e1e;
+  color: #1db954;
+  font-weight: 600;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: #1db954;
+  color: #121212;
+}
+
+/* Light Mode Theme Styles */
+body.light-mode {
+  background-color: #f4f4f4;
+  color: #121212;
+}
+
+body.light-mode .card-container {
+  background-color: #ffffff;
+  border-color: #dddddd;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .tech-stack-section {
+  background-color: #f9f9f9;
+  border-color: #eeeeee;
+}
+
+body.light-mode .tech-badge {
+  background-color: #eeeeee;
+  border-color: #dddddd;
+}
+
+body.light-mode .bio-section h2,
+body.light-mode .card-footer h3 {
+  color: #222222;
+}
+
+body.light-mode .theme-btn {
+  background-color: #ffffff;
+}
